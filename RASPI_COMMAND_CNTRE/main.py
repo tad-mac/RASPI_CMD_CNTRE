@@ -7,7 +7,7 @@ class MainWindow(QWidget):
 
     def __init__(self):
         super().__init__()
-        # self.style_from_file()
+        self.setStyleSheet(self.style_from_file("style.qss"))
         self.init_ui()
 
     def init_ui(self):
@@ -19,14 +19,14 @@ class MainWindow(QWidget):
 
         self.timing()
 
-        self.layout = QHBoxLayout()
+        self.layout = QVBoxLayout()
         self.layout.addWidget(self.title)
         self.layout.addWidget(self.showTime)
         self.setLayout(self.layout)
         self.setWindowTitle("RASPI CMD CNTR")
         self.show()
 
-    def style_from_file(path):
+    def style_from_file(self, path):
         self.setObjectName("MainWidget")
         with open(path, 'r') as f:
             content = f.read()

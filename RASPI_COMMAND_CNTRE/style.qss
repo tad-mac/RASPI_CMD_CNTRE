@@ -1,0 +1,7 @@
+QWidget{
+    background-color: black;
+}
+
+QLabel{
+        color: white;
+}
